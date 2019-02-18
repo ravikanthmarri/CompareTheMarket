@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        let urlString = "http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt"
+        let service: Service = DataLoadService()
+        let wcService : WordCountService = WordCountServiceOne()
+        let primeNumberService: PrimeNumber = PrimeNumberService()
+        window?.rootViewController = FileScanViewController(loadService: service, wordCountService: wcService, primeNumberService: primeNumberService, urlString: urlString)
         return true
     }
 

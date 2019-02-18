@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		BC18EFA32218BFF800A534F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFA22218BFF800A534F9 /* AppDelegate.swift */; };
-		BC18EFA52218BFF800A534F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFA42218BFF800A534F9 /* ViewController.swift */; };
-		BC18EFA82218BFF800A534F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18EFA62218BFF800A534F9 /* Main.storyboard */; };
 		BC18EFAA2218BFFB00A534F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC18EFA92218BFFB00A534F9 /* Assets.xcassets */; };
 		BC18EFAD2218BFFB00A534F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18EFAB2218BFFB00A534F9 /* LaunchScreen.storyboard */; };
-		BC18EFB82218BFFB00A534F9 /* CompareTheMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFB72218BFFB00A534F9 /* CompareTheMarketTests.swift */; };
+		BC18EFC82218D51100A534F9 /* FileScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFC62218D51100A534F9 /* FileScanViewController.swift */; };
+		BC18EFC92218D51100A534F9 /* FileScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC18EFC72218D51100A534F9 /* FileScanViewController.xib */; };
+		BC18EFCB2218D67200A534F9 /* DataLoadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFCA2218D67200A534F9 /* DataLoadService.swift */; };
+		BC18EFCD2218DAD000A534F9 /* WordCountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18EFCC2218DAD000A534F9 /* WordCountService.swift */; };
+		BCB1DA372219F77E0019FC8A /* WordCountServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1DA362219F77E0019FC8A /* WordCountServiceTests.swift */; };
+		BCB1DA39221A32350019FC8A /* PrimeNumberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1DA38221A32350019FC8A /* PrimeNumberService.swift */; };
+		BCB1DA3B221A36830019FC8A /* PrimeNumberServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1DA3A221A36830019FC8A /* PrimeNumberServiceTests.swift */; };
+		BCB1DA3D221A3A600019FC8A /* TestDataLoadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1DA3C221A3A600019FC8A /* TestDataLoadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +33,19 @@
 /* Begin PBXFileReference section */
 		BC18EF9F2218BFF800A534F9 /* CompareTheMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompareTheMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC18EFA22218BFF800A534F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC18EFA42218BFF800A534F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC18EFA72218BFF800A534F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC18EFA92218BFFB00A534F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC18EFAC2218BFFB00A534F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC18EFAE2218BFFB00A534F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC18EFB32218BFFB00A534F9 /* CompareTheMarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompareTheMarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC18EFB72218BFFB00A534F9 /* CompareTheMarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTheMarketTests.swift; sourceTree = "<group>"; };
 		BC18EFB92218BFFB00A534F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC18EFC62218D51100A534F9 /* FileScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileScanViewController.swift; sourceTree = "<group>"; };
+		BC18EFC72218D51100A534F9 /* FileScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileScanViewController.xib; sourceTree = "<group>"; };
+		BC18EFCA2218D67200A534F9 /* DataLoadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadService.swift; sourceTree = "<group>"; };
+		BC18EFCC2218DAD000A534F9 /* WordCountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountService.swift; sourceTree = "<group>"; };
+		BCB1DA362219F77E0019FC8A /* WordCountServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountServiceTests.swift; sourceTree = "<group>"; };
+		BCB1DA38221A32350019FC8A /* PrimeNumberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeNumberService.swift; sourceTree = "<group>"; };
+		BCB1DA3A221A36830019FC8A /* PrimeNumberServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeNumberServiceTests.swift; sourceTree = "<group>"; };
+		BCB1DA3C221A3A600019FC8A /* TestDataLoadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataLoadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +88,14 @@
 			isa = PBXGroup;
 			children = (
 				BC18EFA22218BFF800A534F9 /* AppDelegate.swift */,
-				BC18EFA42218BFF800A534F9 /* ViewController.swift */,
-				BC18EFA62218BFF800A534F9 /* Main.storyboard */,
 				BC18EFA92218BFFB00A534F9 /* Assets.xcassets */,
 				BC18EFAB2218BFFB00A534F9 /* LaunchScreen.storyboard */,
 				BC18EFAE2218BFFB00A534F9 /* Info.plist */,
+				BC18EFC62218D51100A534F9 /* FileScanViewController.swift */,
+				BC18EFC72218D51100A534F9 /* FileScanViewController.xib */,
+				BC18EFCA2218D67200A534F9 /* DataLoadService.swift */,
+				BC18EFCC2218DAD000A534F9 /* WordCountService.swift */,
+				BCB1DA38221A32350019FC8A /* PrimeNumberService.swift */,
 			);
 			path = CompareTheMarket;
 			sourceTree = "<group>";
@@ -90,8 +103,10 @@
 		BC18EFB62218BFFB00A534F9 /* CompareTheMarketTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC18EFB72218BFFB00A534F9 /* CompareTheMarketTests.swift */,
 				BC18EFB92218BFFB00A534F9 /* Info.plist */,
+				BCB1DA362219F77E0019FC8A /* WordCountServiceTests.swift */,
+				BCB1DA3A221A36830019FC8A /* PrimeNumberServiceTests.swift */,
+				BCB1DA3C221A3A600019FC8A /* TestDataLoadService.swift */,
 			);
 			path = CompareTheMarketTests;
 			sourceTree = "<group>";
@@ -179,7 +194,7 @@
 			files = (
 				BC18EFAD2218BFFB00A534F9 /* LaunchScreen.storyboard in Resources */,
 				BC18EFAA2218BFFB00A534F9 /* Assets.xcassets in Resources */,
-				BC18EFA82218BFF800A534F9 /* Main.storyboard in Resources */,
+				BC18EFC92218D51100A534F9 /* FileScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC18EFA52218BFF800A534F9 /* ViewController.swift in Sources */,
+				BC18EFC82218D51100A534F9 /* FileScanViewController.swift in Sources */,
 				BC18EFA32218BFF800A534F9 /* AppDelegate.swift in Sources */,
+				BCB1DA39221A32350019FC8A /* PrimeNumberService.swift in Sources */,
+				BC18EFCB2218D67200A534F9 /* DataLoadService.swift in Sources */,
+				BC18EFCD2218DAD000A534F9 /* WordCountService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC18EFB82218BFFB00A534F9 /* CompareTheMarketTests.swift in Sources */,
+				BCB1DA372219F77E0019FC8A /* WordCountServiceTests.swift in Sources */,
+				BCB1DA3B221A36830019FC8A /* PrimeNumberServiceTests.swift in Sources */,
+				BCB1DA3D221A3A600019FC8A /* TestDataLoadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +241,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BC18EFA62218BFF800A534F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC18EFA72218BFF800A534F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC18EFAB2218BFFB00A534F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
