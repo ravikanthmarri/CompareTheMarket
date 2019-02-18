@@ -30,16 +30,32 @@ class FileScanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fileContent = loadService.load(from: urlString)
-        var resultString = ""
-        wordCountService.countWords(in: fileContent).forEach {
-            if primeNumberService.isPrimeNumber(number: $1){
-                resultString.append("\($0) : \($1) ==> Prime number \n")
-            }else{
-                resultString.append("\($0) : \($1) \n")
+        loadService.load(from: urlString) { [weak self] (loadResult) in
+            
+            guard let strongSelf = self else { return }
+            
+            switch loadResult {
+            case let .failure(error):
+                print(error)
+            case let .success(data):
+                DispatchQueue.main.async {
+                    strongSelf.processResult(with: data)
+                }
             }
         }
-        resultTextView.text = resultString
     }
-
+    
+    func processResult(with result: String) {
+        
+        var displayString = ""
+        wordCountService.countWords(in: result).forEach {
+            if primeNumberService.isPrimeNumber(number: $1){
+                displayString.append("\($0) : \($1) ==> Prime number \n")
+            }else{
+                displayString.append("\($0) : \($1) \n")
+            }
+        }
+        resultTextView.text = displayString
+    }
+    
 }

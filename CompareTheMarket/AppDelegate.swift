@@ -23,7 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let service: Service = DataLoadService()
         let wcService : WordCountService = WordCountServiceOne()
         let primeNumberService: PrimeNumber = PrimeNumberService()
-        window?.rootViewController = FileScanViewController(loadService: service, wordCountService: wcService, primeNumberService: primeNumberService, urlString: urlString)
+        
+        // Dependency Injection
+        let fileScanController = FileScanViewController(loadService: service, wordCountService: wcService, primeNumberService: primeNumberService, urlString: urlString)
+        
+        window?.rootViewController = fileScanController
         return true
     }
 

@@ -11,33 +11,38 @@ import XCTest
 
 class TestDataLoadService: XCTestCase {
 
-    func test_load_requestsDataFromURL() {
-        let urlString = "https://test-url.com"
+    func test_load_failure_Error() {
         
-        let sut = MockDataLoadService()
-        _ = sut.load(from: urlString)
+        let urlString = "https://     &^*(%$ test-url.com"
+        let sut = DataLoadService()
+        let expectation = XCTestExpectation(description: "Fetch from bad URL")
         
-        XCTAssertEqual(sut.requestedURLs, [urlString])
+        sut.load(from: urlString) { (result) in
+            switch result {
+            case .failure(_):
+                expectation.fulfill()
+            case .success(_):
+                XCTFail()
+            }
+        }
+        wait(for: [expectation], timeout: 5)
     }
     
-    func test_loadTwice_requestsDataFromURLTwice() {
-        let urlStringOne = "https://test-url-1.com"
-        let urlStringTwo = "https://test-url-2.com"
-        
-        let sut = MockDataLoadService()
-        _ = sut.load(from: urlStringOne)
-        _ = sut.load(from: urlStringTwo)
-        
-        XCTAssertEqual(sut.requestedURLs, [urlStringOne, urlStringTwo])
-    }
+    func test_load_success() {
 
-    class MockDataLoadService: Service {
-        var requestedURLs = [String]()
-
-        func load(from urlString: String) -> String {
-            requestedURLs.append(urlString)
-            return "Test data"
+        let urlString = "http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt"
+        let sut = DataLoadService()
+        let expectation = XCTestExpectation(description: "Fetch from good URL")
+    
+        sut.load(from: urlString) { (result) in
+            switch result {
+            case .failure(_):
+                XCTFail()
+            case .success(_):
+                expectation.fulfill()
+            }
         }
+        wait(for: [expectation], timeout: 5)
     }
 
 }

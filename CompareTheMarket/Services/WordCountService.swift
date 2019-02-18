@@ -26,13 +26,13 @@ class WordCountServiceOne: WordCountService {
         
         for word in allWords {
             let trimmedWord = word.trimmingCharacters(in: .punctuationCharacters)
-            if trimmedWord == "" {
+            let wordsToExclude = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I", "II", "III", ""]
+            if wordsToExclude.contains(trimmedWord) {
                 continue
             }
             wordCounts[trimmedWord, default: 0] += 1
         }
         return wordCounts
-                
     }
 
 }

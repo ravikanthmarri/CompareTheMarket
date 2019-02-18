@@ -87,15 +87,13 @@
 		BC18EFA12218BFF800A534F9 /* CompareTheMarket */ = {
 			isa = PBXGroup;
 			children = (
+				BCB1DA40221A41710019FC8A /* Views */,
+				BCB1DA3F221A41530019FC8A /* Controllers */,
+				BCB1DA3E221A41300019FC8A /* Services */,
 				BC18EFA22218BFF800A534F9 /* AppDelegate.swift */,
 				BC18EFA92218BFFB00A534F9 /* Assets.xcassets */,
 				BC18EFAB2218BFFB00A534F9 /* LaunchScreen.storyboard */,
 				BC18EFAE2218BFFB00A534F9 /* Info.plist */,
-				BC18EFC62218D51100A534F9 /* FileScanViewController.swift */,
-				BC18EFC72218D51100A534F9 /* FileScanViewController.xib */,
-				BC18EFCA2218D67200A534F9 /* DataLoadService.swift */,
-				BC18EFCC2218DAD000A534F9 /* WordCountService.swift */,
-				BCB1DA38221A32350019FC8A /* PrimeNumberService.swift */,
 			);
 			path = CompareTheMarket;
 			sourceTree = "<group>";
@@ -109,6 +107,32 @@
 				BCB1DA3C221A3A600019FC8A /* TestDataLoadService.swift */,
 			);
 			path = CompareTheMarketTests;
+			sourceTree = "<group>";
+		};
+		BCB1DA3E221A41300019FC8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC18EFCA2218D67200A534F9 /* DataLoadService.swift */,
+				BC18EFCC2218DAD000A534F9 /* WordCountService.swift */,
+				BCB1DA38221A32350019FC8A /* PrimeNumberService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BCB1DA3F221A41530019FC8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC18EFC62218D51100A534F9 /* FileScanViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BCB1DA40221A41710019FC8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC18EFC72218D51100A534F9 /* FileScanViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
